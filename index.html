@@ -1,17 +1,101 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Trail Type</title>
-    <meta name="theme-color" content="#1f7a5c" />
-    <meta name="description" content="Learn to type on a nature trail. Home row to expert. Accuracy first." />
-    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=IBM+Plex+Mono:wght@500;600&family=Nunito+Sans:wght@400;600;700&display=swap" />
-    <script type="module" crossorigin src="./assets/index-BvhIgaSb.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-h5jqiyv2.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
-</html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Trail Type — The Quiet Path</title>
+<meta name="theme-color" content="#1f7a5c" />
+<meta name="description" content="Walk a prairie trail. Type to rescue walkers, stamp stones, and finish the mountain." />
+<link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=IBM+Plex+Mono:wght@500;600&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+<style>
+:root{--ink:#1c241c;--paper:#f3efe4;--moss:#1f7a5c;--moss-2:#165a44;--gold:#c9a227;--clay:#8b5a3c;--card:#fffaf1;--shadow:0 18px 40px rgba(40,30,10,.18)}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:#ebe4d4;color:var(--ink);font-family:"Nunito Sans",system-ui,sans-serif}button{font:inherit;cursor:pointer}h1,h2,h3{font-family:Fraunces,Georgia,serif;margin:0;font-weight:700}.app{max-width:1100px;margin:0 auto;padding:20px 16px 80px}.top{display:flex;gap:16px;justify-content:space-between;align-items:flex-start;flex-wrap:wrap}.kicker{letter-spacing:.16em;font-size:11px;font-weight:800;color:#6b7a6b;text-transform:uppercase}.sub{color:#4d5a4d;max-width:42ch;line-height:1.45;margin-top:6px}.stats{display:flex;gap:14px;flex-wrap:wrap}.stat{background:var(--card);border:1px solid #e4dcc8;border-radius:16px;padding:10px 14px;min-width:72px;text-align:center;box-shadow:var(--shadow)}.stat b{display:block;font-family:Fraunces,serif;font-size:22px}.stat span{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#6b7a6b}.walkers{display:flex;gap:8px;align-items:center;margin:18px 0 12px;flex-wrap:wrap}.chip{display:flex;align-items:center;gap:8px;border:1px solid #d8d0bc;background:#fffaf1;border-radius:999px;padding:6px 12px 6px 6px}.chip.on{border-color:var(--moss);box-shadow:0 0 0 3px rgba(31,122,92,.18)}.chip img{width:36px;height:36px;border-radius:50%;object-fit:cover}.chip small{display:block;color:#667;font-size:11px}.mapwrap{position:relative;border-radius:18px;overflow:hidden;box-shadow:var(--shadow);border:8px solid #efe6d2;background:#cbb98a}.mapwrap img.map{width:100%;display:block}.stone{position:absolute;width:46px;height:46px;border-radius:50%;border:3px solid #fff;display:grid;place-items:center;font-weight:800;color:#1c241c;background:rgba(255,250,241,.86);transform:translate(-50%,-50%);box-shadow:0 6px 16px rgba(0,0,0,.25)}.stone.lock{opacity:.55;filter:saturate(.6)}.stone.done{background:#1f7a5c;color:#fff}.stone.here{outline:4px solid #c9a227;z-index:2}.stone img{width:100%;height:100%;object-fit:cover;border-radius:50%}.actions{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}.btn{border:0;border-radius:999px;padding:12px 18px;font-weight:800}.btn.pri{background:var(--moss);color:#fff}.btn.ghost{background:#fffaf1;border:1px solid #d8d0bc}.modes{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin-top:18px}.mode{background:var(--card);border:1px solid #e4dcc8;border-radius:16px;padding:14px;box-shadow:var(--shadow)}.mode p{margin:0;color:#556;font-size:13px}.play,.home,.result{display:none}.play.on,.home.on,.result.on{display:block}.banner{position:relative;border-radius:18px;overflow:hidden;box-shadow:var(--shadow)}.banner img{width:100%;height:220px;object-fit:cover;display:block}.banner .cap{position:absolute;inset:auto 0 0 0;padding:16px 18px;background:linear-gradient(transparent,rgba(12,18,12,.78));color:#fff}.hud{display:flex;justify-content:space-between;gap:10px;margin:12px 0;flex-wrap:wrap}.pill{background:#fffaf1;border-radius:999px;padding:8px 12px;border:1px solid #e4dcc8}.passage{background:var(--card);border-radius:18px;padding:18px;min-height:120px;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:clamp(18px,3.4vw,26px);line-height:1.55;box-shadow:var(--shadow)}.passage .done{color:#1f7a5c}.passage .cur{background:#c9a227;color:#1c241c;border-radius:4px}.passage .wait{color:#8a8476}.ghostbar{height:10px;background:#e6decc;border-radius:99px;overflow:hidden;margin:10px 0 4px;position:relative}.ghostbar i,.ghostbar b{position:absolute;top:0;height:100%;width:3px}.ghostbar i{background:#8b5a3c}.ghostbar b{background:var(--moss)}.kb{display:none;margin-top:14px}@media (pointer:coarse){.kb{display:block}}.row{display:flex;justify-content:center;gap:4px;margin-bottom:4px}.key{min-width:28px;padding:10px 0;text-align:center;background:#fff;border:1px solid #d8d0bc;border-radius:8px;font-family:"IBM Plex Mono",monospace;font-weight:700}.key.home{background:#d7efe4}.key.next{outline:2px solid var(--gold)}.journal{display:none;background:var(--card);border-radius:18px;padding:18px;margin-top:16px;box-shadow:var(--shadow)}.journal.on{display:block}.entry{border-top:1px dashed #d8d0bc;padding:10px 0}.result{text-align:center;padding:28px 12px}.big{font-size:42px}.loot{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:12px 0}.badge{background:#fffaf1;border:1px solid #e4dcc8;border-radius:14px;padding:10px 12px}.storyline{font-style:italic;margin:8px 0 0}
+</style>
+</head>
+<body>
+<div class="app">
+<section id="home" class="home on">
+<div class="top"><div><div class="kicker">WolfWhale library tool</div><h1>Trail Type</h1><p class="sub">A storm pulled the trail stones off the map. Type to set them back. Accuracy opens the next stone. Speed is a medal, not a lock.</p></div>
+<div class="stats"><div class="stat"><b id="stStamps">0</b><span>Stamps</span></div><div class="stat"><b id="stBerries">0</b><span>Berries</span></div><div class="stat"><b id="stWpm">0</b><span>Best WPM</span></div><div class="stat"><b id="stStreak">0</b><span>Day streak</span></div></div></div>
+<div class="walkers" id="walkers"></div>
+<div class="mapwrap"><img class="map" src="./trail/map.jpg" alt="Trail map" /><div id="stones"></div></div>
+<div class="actions"><button class="btn pri" id="btnStart">Walk this stone</button><button class="btn ghost" id="btnDaily">Daily trail</button><button class="btn ghost" id="btnJournal">Journal</button><button class="btn ghost" id="btnReset">Reset trail</button></div>
+<div class="modes"><div class="mode"><h3>Story walk</h3><p>Type the page on each stone. Finish and a journal stamp drops.</p></div><div class="mode"><h3>Rescue</h3><p>Words hang over a lost walker. Type them clean to bring them home.</p></div><div class="mode"><h3>Ghost race</h3><p>Your last clean run becomes the ghost on the bar.</p></div><div class="mode"><h3>Daily seed</h3><p>One prairie sentence every day. Keep a streak. No account.</p></div></div>
+<div id="journal" class="journal"></div>
+</section>
+<section id="play" class="play">
+<div class="banner"><img id="playArt" alt="" /><div class="cap"><div class="kicker" id="playKicker">Stone 1</div><h2 id="playTitle">Meadow</h2><p class="storyline" id="playStory"></p></div></div>
+<div class="hud"><div class="pill" id="hudMode">Story</div><div class="pill" id="hudAcc">100%</div><div class="pill" id="hudWpm">0 wpm</div><div class="pill" id="hudCombo">combo 0</div><button class="btn ghost" id="btnBack">Map</button></div>
+<div class="ghostbar"><i id="ghostMark" style="left:0"></i><b id="youMark" style="left:0"></b></div>
+<div class="passage" id="passage"></div>
+<input id="hidden" autocomplete="off" autocapitalize="off" spellcheck="false" style="position:absolute;opacity:0;height:0;width:0" />
+<div class="kb" id="kb"></div>
+</section>
+<section id="result" class="result"><div class="kicker" id="resKicker">Stone stamped</div><h2 class="big" id="resTitle">Quiet hands</h2><p id="resBlurb"></p><div class="loot" id="resLoot"></div><div class="actions" style="justify-content:center"><button class="btn pri" id="btnAgain">Walk again</button><button class="btn ghost" id="btnMap">Back to map</button></div></section>
+</div>
+<script>
+const STONES=[{id:1,name:"Meadow",art:"meadow",x:18,y:82,story:"Dew on the grass. F and J have little bumps. Rest both index fingers there before you take a step."},{id:2,name:"River bend",art:"meadow",x:22,y:58,story:"The river talks in vowels. Reach up for E and I without peeking."},{id:3,name:"Pine rise",art:"woods",x:34,y:38,story:"Top-row wind. Q and P live at the edges. Keep your wrists quiet."},{id:4,name:"Root stair",art:"woods",x:46,y:52,story:"Bottom-row roots. V and M sit under the home bumps. Feel. Do not look down."},{id:5,name:"Ridge",art:"woods",x:52,y:28,story:"X and Z are shy keys. Punctuation is a small gate on the trail."},{id:6,name:"Lookout",art:"woods",x:64,y:42,story:"Numbers live on the high ridge. Count ducks and stones."},{id:7,name:"Ice shelf",art:"night",x:58,y:68,story:"Shift is a winter coat. Hold it only as long as you need the mark."},{id:8,name:"Town lights",art:"night",x:76,y:60,story:"Sentences. Type the way you walk: one honest step."},{id:9,name:"Night lake",art:"night",x:80,y:24,story:"Paragraphs. Forty words a minute is a medal, not a lock."},{id:10,name:"Summit",art:"night",x:88,y:78,story:"The whole board is yours. Trust the bumps."}];
+const WALKERS=[{id:"fox",name:"Fox",skill:"Berry bonus on 97%+",art:"./trail/fox.jpg"},{id:"hare",name:"Hare",skill:"Ghost line runs hotter",art:"./trail/hare.jpg"},{id:"owl",name:"Owl",skill:"Shows the next keys",art:"./trail/owl.jpg"}];
+const PAGES={1:"a fox sat  fj as  a sad lad  ask dad  a flask",2:"see a deer  a red lake  we like tea  a quiet field",3:"two yellow poplars  we type our way  a pretty quarry path",4:"a calm beaver  move by the bank  can a cub climb",5:"a lazy fox.  wait, zoom.  six, zero.",6:"12 ducks  30 pines  2026 trail",7:"Stop! Look.  home row:  shift-ready?",8:"A fox ran past the old pine. We pack a lunch by the river.",9:"Count the ducks. Name the trees. Keep your eyes up. Fast is fine. Clean is better.",10:"You started with two keys and a meadow. Now the whole board is yours. Do not look down. Trust the bumps on F and J."};
+const RESCUES={1:"fox leaf nest dew fox leaf",2:"hare reed eddy kite hare",3:"pine wolf path crow pine",4:"root cub bark moss root",5:"owl dusk gate star owl",6:"ten camp peak fire ten",7:"ice wind coat lamp ice",8:"town dock bell lane town",9:"lake moon loon mist lake",10:"summit quiet hands home"};
+const JOURNAL={1:"The meadow keeps the first two keys honest.",2:"Vowels live in the river. Do not splash.",3:"Pines teach reach without lift.",4:"Roots are the bottom row. Feel, do not hunt.",5:"Small marks close a sentence like a gate.",6:"Numbers are just another ridge.",7:"Caps are weather. Wear them briefly.",8:"A town is a paragraph you can walk.",9:"Night lake wants forty clean words.",10:"The mountain does not care how fast you started."};
+const SAVE="trail-type-v2";
+const state=load();
+function load(){try{return Object.assign(blank(),JSON.parse(localStorage.getItem(SAVE)||"{}"));}catch(e){return blank();}}
+function blank(){return {walker:"fox",done:{},berries:0,bestWpm:0,streak:0,lastDaily:"",journal:[],ghosts:{},dailyDone:""};}
+function save(){localStorage.setItem(SAVE,JSON.stringify(state));}
+const home=document.getElementById("home"),play=document.getElementById("play"),result=document.getElementById("result");
+let current=1,mode="story",text="",idx=0,errors=0,startedAt=0,combo=0,ghostTimer=null;
+function show(el){home.classList.toggle("on",el==="home");play.classList.toggle("on",el==="play");result.classList.toggle("on",el==="result");}
+function renderHome(){
+document.getElementById("stStamps").textContent=Object.keys(state.done).length+"/10";
+document.getElementById("stBerries").textContent=state.berries;
+document.getElementById("stWpm").textContent=state.bestWpm|0;
+document.getElementById("stStreak").textContent=state.streak|0;
+const w=document.getElementById("walkers");
+w.innerHTML=WALKERS.map(x=>`<button class="chip ${state.walker===x.id?"on":""}" data-w="${x.id}"><img src="${x.art}" alt="" /><span>${x.name}<small>${x.skill}</small></span></button>`).join("");
+w.querySelectorAll("[data-w]").forEach(b=>b.onclick=()=>{state.walker=b.dataset.w;save();renderHome();});
+const box=document.getElementById("stones");
+box.innerHTML=STONES.map(s=>{const locked=s.id>1&&!state.done[s.id-1];const done=!!state.done[s.id];const here=s.id===current;const inner=here?`<img src="./trail/${state.walker}.jpg" alt="">`:s.id;return `<button class="stone ${locked?"lock":""} ${done?"done":""} ${here?"here":""}" style="left:${s.x}%;top:${s.y}%" data-id="${s.id}" ${locked?"disabled":""}>${inner}</button>`;}).join("");
+box.querySelectorAll("[data-id]").forEach(b=>b.onclick=()=>{current=+b.dataset.id;renderHome();});
+}
+document.getElementById("btnStart").onclick=()=>startPlay("story");
+document.getElementById("btnDaily").onclick=()=>startPlay("daily");
+document.getElementById("btnJournal").onclick=()=>{const j=document.getElementById("journal");j.classList.toggle("on");j.innerHTML=`<h3>Trail journal</h3>`+(state.journal.length?state.journal.map(id=>`<div class="entry"><b>${STONES[id-1].name}</b><div>${JOURNAL[id]}</div></div>`).join(""):"<p>Walk a stone to write the first page.</p>");};
+document.getElementById("btnReset").onclick=()=>{if(confirm("Clear stamps, berries, and journal on this device?")){localStorage.removeItem(SAVE);Object.assign(state,blank());renderHome();}};
+document.getElementById("btnBack").onclick=()=>{stopGhost();show("home");renderHome();};
+document.getElementById("btnMap").onclick=()=>{show("home");renderHome();};
+document.getElementById("btnAgain").onclick=()=>startPlay(mode==="daily"?"daily":"story");
+function today(){return new Date().toISOString().slice(0,10);}
+function buildText(m){if(m==="daily"){const bank=["The prairie keeps a long quiet.","A hare cuts across the gold grass.","Owl waits until the lake goes still.","Type each word as if the trail can hear you.","Berries stain the map where you stood."];const seed=Number(today().replace(/-/g,""));return bank[seed%bank.length]+" "+bank[(seed>>2)%bank.length];}if(m==="rescue")return RESCUES[current];return PAGES[current];}
+function startPlay(m){mode=m;const s=STONES[current-1];text=m==="daily"?buildText("daily"):(Math.random()<0.35?buildText("rescue"):buildText("story"));idx=0;errors=0;combo=0;startedAt=0;
+document.getElementById("playArt").src="./trail/"+s.art+".jpg";
+document.getElementById("playKicker").textContent=m==="daily"?"Daily trail":"Stone "+s.id;
+document.getElementById("playTitle").textContent=m==="daily"?"Today's sentence":s.name;
+document.getElementById("playStory").textContent=m==="daily"?"One new line. Keep the streak.":s.story;
+document.getElementById("hudMode").textContent=text.split(" ").length<=8?"Rescue":(m==="daily"?"Daily":"Story walk");
+paintPassage();show("play");const hidden=document.getElementById("hidden");hidden.value="";hidden.focus();startGhost();drawKb();}
+function paintPassage(){document.getElementById("passage").innerHTML=[...text].map((ch,i)=>{if(i<idx)return `<span class="done">${esc(ch)}</span>`;if(i===idx)return `<span class="cur">${esc(ch===" "?"·":ch)}</span>`;return `<span class="wait">${esc(ch)}</span>`;}).join("");}
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/ /g,"&nbsp;");}
+function wpm(){if(!startedAt)return 0;const min=Math.max((Date.now()-startedAt)/60000,1/60);return Math.round((idx/5)/min);}
+function acc(){const total=idx+errors;return total?Math.max(0,Math.round(100*idx/total)):100;}
+window.addEventListener("keydown",onKey);
+document.getElementById("hidden").addEventListener("input",e=>{const v=e.target.value;if(!v)return;typeChar(v.slice(-1));e.target.value="";});
+function onKey(e){if(!play.classList.contains("on"))return;if(e.key==="Backspace"){e.preventDefault();return;}if(e.key.length===1){e.preventDefault();typeChar(e.key);}}
+function typeChar(ch){if(!startedAt)startedAt=Date.now();if(ch===text[idx]){idx++;combo++;if(idx>=text.length)finish();}else{errors++;combo=0;}document.getElementById("hudAcc").textContent=acc()+"%";document.getElementById("hudWpm").textContent=wpm()+" wpm";document.getElementById("hudCombo").textContent="combo "+combo;document.getElementById("youMark").style.left=Math.round(100*idx/text.length)+"%";paintPassage();drawKb();}
+function startGhost(){stopGhost();const rec=state.ghosts[current];if(!rec){document.getElementById("ghostMark").style.left="0";return;}const t0=Date.now();ghostTimer=setInterval(()=>{document.getElementById("ghostMark").style.left=(Math.min(1,(Date.now()-t0)/rec.ms)*100)+"%";},80);}
+function stopGhost(){if(ghostTimer)clearInterval(ghostTimer);ghostTimer=null;}
+function finish(){stopGhost();const speed=wpm(),a=acc(),ms=Date.now()-startedAt;state.bestWpm=Math.max(state.bestWpm,speed);const prev=state.ghosts[current];if(!prev||ms<prev.ms)state.ghosts[current]={ms,wpm:speed};let berries=4+Math.floor(speed/10)+(a>=97?3:0);if(state.walker==="fox"&&a>=97)berries+=2;if(mode==="daily"){if(state.dailyDone!==today()){state.streak=state.lastDaily&&daysBetween(state.lastDaily,today())===1?state.streak+1:1;state.lastDaily=today();state.dailyDone=today();berries+=8;}}else{state.done[current]={wpm:speed,acc:a};if(!state.journal.includes(current))state.journal.push(current);}state.berries+=berries;save();
+document.getElementById("resKicker").textContent=mode==="daily"?"Daily stamped":"Stone "+current+" stamped";
+document.getElementById("resTitle").textContent=a>=97?"Quiet hands":speed>=40?"Fast feet":"Trail dust";
+document.getElementById("resBlurb").textContent=speed+" wpm · "+a+"% accurate · +"+berries+" berries";
+document.getElementById("resLoot").innerHTML=`<div class="badge">Stamp ${current}</div><div class="badge">${berries} berries</div><div class="badge">${WALKERS.find(w=>w.id===state.walker).name} walked</div>${a>=100?'<div class="badge">Perfect page</div>':''}`;
+show("result");}
+function daysBetween(a,b){return Math.round((new Date(b)-new Date(a))/86400000);}
+function drawKb(){const rows=["qwertyuiop","asdfghjkl;","zxcvbnm,."];const next=(text[idx]||"").toLowerCase();document.getElementById("kb").innerHTML=rows.map(r=>`<div class="row">${[...r].map(k=>`<div class="key ${"asdfjkl;".includes(k)?"home":""} ${k===next?"next":""}">${k}</div>`).join("")}</div>`).join("");}
+document.body.addEventListener("click",()=>{if(play.classList.contains("on"))document.getElementById("hidden").focus();});
+renderHome();
+</script>
+</body></html>
